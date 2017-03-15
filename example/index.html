@@ -7,6 +7,7 @@
     <title>Examples</title>
     <link href="../library/base.css" rel="stylesheet">
     <link href="../date-picker/main.css" rel="stylesheet">
+    <link href="../pager/main.css" rel="stylesheet">
     <style>
     .container {
         width: 800px;
@@ -46,8 +47,9 @@
 </body>
 <script src="../library/jquery-3.1.1.min.js"></script>
 <script src="../date-picker/main.js"></script>
+<script src="../pager/main.js"></script>
 <script>
-//初始化
+//日期控件
 datePicker.init(':text', {
     mark: '/',
     minDate: '2017/01/13',
@@ -62,6 +64,17 @@ datePicker.init(':text', {
 $(document).on('click', 'button', function() {
     datePicker.show($(':text')[0]);
     return false;
+})
+
+//分页控件
+pager.initPager('.container', {
+    //当前页
+    currPage: 1,
+    //总页数
+    totalPage: 15,
+    goPage: function(currPage) {
+        console.log('当前页码' + currPage);
+    }
 })
 </script>
 

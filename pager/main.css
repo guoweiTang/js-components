@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/**
+ * @author ice@lagou.com
+ */
+
+#pager {
+  display: none;
+  margin: 35px 0 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #999;
+}
+#pager span {
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  margin-right: 14px;
+  cursor: pointer;
+  font-size: 16px;
+  border: solid 1px #cecece;
+  border-radius: 2px;
+}
+#pager .pages {
+  width: 34px;
+}
+#pager .page_prev,
+#pager .page_next {
+  width: 72px;
+}
+#pager .disabled {
+  color: #e1e1e1;
+  border-color: #e1e1e1;
+  cursor: text;
+}
+#pager .focus {
+  color: #fff;
+  background-color: #272b32;
+}
+#pager .pager_wrapper {
+  display: inline;
+}
